@@ -191,6 +191,7 @@ exports[`RemoteSVG Component handles fetch error correctly 1`] = `
       width="24"
     >
       <svg
+        data-id="image-error"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -491,8 +492,6 @@ exports[`RemoteSVG Component renders active SVG correctly without active color 1
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component renders correctly when using cache 1`] = `[Function]`;
-
 exports[`RemoteSVG Component renders disabled SVG correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -595,20 +594,4 @@ exports[`RemoteSVG Component renders disabled SVG correctly without active color
     </i>
   </span>
 </DocumentFragment>
-`;
-
-exports[`RemoteSVG Component resets the SVG cache 1`] = `
-<svg
-  data-testid="remote-svg"
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-/>
-`;
-
-exports[`RemoteSVG Component sets global timestamp if it does not exist 1`] = `
-<svg
-  data-testid="remote-svg"
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-/>
 `;
