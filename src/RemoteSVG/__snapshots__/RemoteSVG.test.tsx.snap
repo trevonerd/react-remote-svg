@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RemoteSVG Component fetches SVG when not available in cache 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component fetches svg and renders 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component fetches svg and renders if intersectionObserver is undefined 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component handles fetch error correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.998 1H17.5L21 4.5V23H3L2.998 1ZM16 1v5h5M9 12l6 6m0-6-6 6"
+          fill="none"
+          stroke="#333"
+          stroke-width="2"
+        />
+      </svg>
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component no url provided 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<span
+    class="emotion-0"
+  >
+    <span
+      style="width: 24px; height: 24px; display: inline-block;"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders SVG correctly with custom width and height as numbers 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 100px;
+  height: 100px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="100"
+      width="100"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders SVG correctly with custom width and height as strings 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 100px;
+  height: 100px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="100px"
+      width="100px"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders SVG with hover correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.emotion-1:hover svg * {
+  fill: #f67645;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders active SVG correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.emotion-1 svg * {
+  fill: #f40000;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders active SVG correctly without active color 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders correctly when using cache 1`] = `[Function]`;
+
+exports[`RemoteSVG Component renders disabled SVG correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.emotion-1 svg * {
+  fill: #333333;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component renders disabled SVG correctly without active color 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+.emotion-1 svg {
+  width: 24px;
+  height: 24px;
+}
+
+<span
+    class="emotion-0"
+  >
+    <i
+      class="emotion-1"
+      height="24"
+      width="24"
+    >
+      <svg
+        data-testid="remote-svg"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component resets the SVG cache 1`] = `
+<svg
+  data-testid="remote-svg"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+/>
+`;
+
+exports[`RemoteSVG Component sets global timestamp if it does not exist 1`] = `
+<svg
+  data-testid="remote-svg"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+/>
+`;

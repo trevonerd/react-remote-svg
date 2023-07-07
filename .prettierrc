@@ -1,0 +1,10 @@
+
+semi: true
+trailingComma: 'all'
+singleQuote: true
+arrowParens: 'avoid'
+printWidth: 120
+bracketSameLine: false
+singleAttributePerLine: true
+tabWidth: 2
+
