@@ -1,11 +1,11 @@
 # RemoteSVG
-RemoteSVG is a React component to efficiently load SVG icons remotely.
+RemoteSVG is a React component for efficiently loading SVG icons from remote sources.
 
 ## Features
-The component uses the Intersection Observer API to only fetch icons when they become visible on the screen, improving the performance of your application.
-It provides configurable caching functionality, reducing the number of requests for the same icons.
-It gives you control over the colors of the icon in different states: default, hover, active, and disabled.
-It supports fully customizable width and height.
+- Lazy loading: Icons are fetched only when they become visible on the screen, improving performance.
+- Customizable colors and effects: Supports customization of the icon appearance in different states: default, hover, active, and disabled.
+- Flexible dimensions: Allows customization of the width and height of the icon.
+- Accessibility: Supports setting the alt text and title attributes for better accessibility.
 
 ## Installation
 
@@ -21,22 +21,19 @@ yarn add react-remote-svg
 
 ```jsx
 import React from 'react';
-import RemoteSVG from './RemoteSVG';
+import RemoteSVG from 'react-remote-svg';
 
 const MyComponent = () => (
   <div>
     <RemoteSVG 
       url="http://example.com/my-icon.svg"
-      color="#000000"
-      hoverColor="#666666"
-      activeColor="#333333"
-      disabledColor="#999999"
+      alt="My Icon"
+      title="My Icon Title"
       width={24}
       height={24}
-      cacheDuration={60}
-      cacheable={true}
-      isActive={false}
-      isDisabled={false}
+      $hoverEffect={{ filter: 'brightness(1.2)' }}
+      $activeEffect={{ border: '2px solid red', borderRadius: '50%' }}
+      $disabledEffect={{ filter: 'grayscale(100%)' }}
     />
   </div>
 );
@@ -45,28 +42,30 @@ export default MyComponent;
 ```
 
 ## Props
-| Prop          | Type             | Description                                         |
-|---------------|------------------|-----------------------------------------------------|
-| url           | string           | The URL of the SVG icon.                            |
-| color         | string           | The default color of the SVG icon.                  |
-| hoverColor    | string           | The color of the SVG icon on hover.                 |
-| activeColor   | string           | The color of the SVG icon when active.              |
-| disabledColor | string           | The color of the SVG icon when disabled.            |
-| width         | number \| string | The width of the SVG icon.                          |
-| height        | number \| string | The height of the SVG icon.                         |
-| cacheDuration | number           | The duration to cache the SVG icon, in seconds.     |
-| cacheable     | boolean          | Whether the SVG icon should be cached.              |
-| isActive      | boolean          | Whether the SVG icon is in an active state.         |
-| isDisabled    | boolean          | Whether the SVG icon is in a disabled state.        |
+| Prop              | Type               | Description                                         |
+|-------------------|--------------------|-----------------------------------------------------|
+| url               | string             | The URL of the SVG icon.                            |
+| alt               | string             | The alternative text for the icon (for accessibility).|
+| title             | string             | The title attribute for the icon (for accessibility).|
+| width             | number \| string   | The width of the SVG icon.                          |
+| height            | number \| string   | The height of the SVG icon.                         |
+| $activeEffect     | React.CSSProperties | CSS properties for customizing the active state of the icon. |
+| $disabledEffect   | React.CSSProperties | CSS properties for customizing the disabled state of the icon. |
+| $hoverEffect      | React.CSSProperties | CSS properties for customizing the hover state of the icon. |
+| isActive          | boolean            | Whether the SVG icon is in an active state.          |
+| isDisabled        | boolean            | Whether the SVG icon is in a disabled state.        |
+| lazyLoad          | boolean            | Whether to lazy load the SVG icon when it appears in the viewport.        |
 
 ## Testing
 
 To test components that depend on `RemoteSVG`, you can use a mock component in your tests. Here's how you can do it:
 
-1. In your test setup file (e.g., `jest.setup.js`), add the following lines to import and use the mock component:
+1. In your test setup file (e.g., `jest.setup.js`), add the following line to import and use the mock component:
 
 ```javascript
 require('react-remote-svg/mock');
 ```
 
-2. Now, you can use the RemoteSVG component in your assertions and tests to verify the behavior of components that depend on RemoteSVG.
+2. Now, you can use the RemoteSVG component in your tests to verify the behavior of components that depend on RemoteSVG.
+
+I apologize for any confusion caused by the previous version of the readme. Thank you for bringing it to my attention, and I appreciate your understanding.

@@ -1,23 +1,24 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
-import DOMPurify from 'dompurify';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import { useInView } from 'react-intersection-observer';
 
-const OBSERVER_OPTIONS = { threshold: 0.1, rootMargin: '200px' };
+import propsFilter from './utils/propFilter';
 
 const supportsIntersectionObserver = typeof window !== 'undefined' && 'IntersectionObserver' in window;
 
 export interface RemoteSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
-  url: string;
-  color?: string;
-  hoverColor?: string;
-  activeColor?: string;
-  disabledColor?: string;
-  width?: number | string;
+  $activeEffect?: React.CSSProperties;
+  $disabledEffect?: React.CSSProperties;
+  $hoverEffect?: React.CSSProperties;
+  alt?: string;
   height?: number | string;
   isActive?: boolean;
   isDisabled?: boolean;
   lazyLoad?: boolean;
+  title?: string;
+  url: string;
+  width?: number | string;
 }
 
 const StyledSVGContainer = styled.span`
@@ -26,128 +27,83 @@ const StyledSVGContainer = styled.span`
   align-items: center;
 `;
 
-const StyledSVG = styled.i<{
-  width: number | string;
+const StyledSVG = styled('img', propsFilter)<{
+  $activeEffect?: React.CSSProperties;
+  $disabledEffect?: React.CSSProperties;
+  $hoverEffect?: React.CSSProperties;
   height: number | string;
-  hoverColor?: string;
   isActive?: boolean;
   isDisabled?: boolean;
-  color?: string;
-  activeColor?: string;
-  disabledColor?: string;
+  width: number | string;
 }>`
-  display: flex;
   width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
   height: ${({ height }) => (typeof height === 'number' ? `${height}px` : height)};
-  cursor: ${({ hoverColor, isDisabled }) => (hoverColor && !isDisabled ? 'pointer' : 'inherit')};
+  cursor: ${({ $hoverEffect, isDisabled }) => ($hoverEffect && !isDisabled ? 'pointer' : 'inherit')};
 
-  ${({ hoverColor, isDisabled }) =>
-    (hoverColor || !isDisabled) &&
+  ${({ isActive, isDisabled, $activeEffect, $disabledEffect }) => {
+    if (isActive) {
+      return { ...$activeEffect };
+    }
+
+    if (isDisabled) {
+      return { ...$disabledEffect };
+    }
+  }};
+
+  ${({ $hoverEffect, isDisabled }) =>
+    $hoverEffect &&
+    !isDisabled &&
     css`
       &:hover {
-        svg {
-          & * {
-            fill: ${hoverColor};
-          }
-        }
+        ${{ ...$hoverEffect }}
       }
     `}
-
-  & svg {
-    width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
-    height: ${({ height }) => (typeof height === 'number' ? `${height}px` : height)};
-
-    & * {
-      fill: ${({ isActive, isDisabled, color, activeColor, disabledColor }) => {
-        if (isActive) {
-          return activeColor || color;
-        }
-        if (isDisabled) {
-          return disabledColor || color;
-        }
-        return color;
-      }};
-    }
-  }
 `;
 
 const RemoteSVG: React.FC<RemoteSVGProps> = ({
-  url,
-  color,
-  hoverColor,
-  activeColor,
-  disabledColor,
-  width = 24,
+  $activeEffect,
+  $disabledEffect,
   height = 24,
+  $hoverEffect,
   isActive = false,
   isDisabled = false,
   lazyLoad = supportsIntersectionObserver,
+  title,
+  alt = title,
+  url,
+  width = 24,
   ...rest
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [svgContent, setSvgContent] = useState<string | null>(null);
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-
-  const fetchSvg = useCallback((): Promise<string> => {
-    return fetch(url)
-      .then(response => response.text())
-      .then(svgText => {
-        return svgText;
-      })
-      .catch(error => {
-        console.error('Error fetching SVG:', url, error);
-        return '<svg data-id="image-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="#333" stroke-width="2" d="M2.998 1H17.5L21 4.5V23H3L2.998 1ZM16 1v5h5M9 12l6 6m0-6-6 6"/></svg>';
-      });
-  }, [url]);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: '150px',
+  });
 
   useEffect(() => {
-    if (!lazyLoad) {
-      fetchSvg().then(svgText => {
-        setSvgContent(svgText);
-        setIsLoaded(true);
-      });
-      return;
-    }
-
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        fetchSvg().then(svgText => {
-          setSvgContent(svgText);
-          setIsLoaded(true);
-        });
-
-        if (wrapperRef.current) {
-          observer.unobserve(wrapperRef.current);
-        }
-      }
-    }, OBSERVER_OPTIONS);
-
-    if (wrapperRef.current) {
-      observer.observe(wrapperRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
+    const loadImage = () => {
+      setIsLoaded(true);
     };
-  }, [url, fetchSvg, lazyLoad]);
+
+    if (!lazyLoad || inView) {
+      loadImage();
+    }
+  }, [lazyLoad, inView]);
 
   return (
-    <StyledSVGContainer
-      ref={wrapperRef}
-      {...rest}
-    >
-      {isLoaded && svgContent ? (
+    <StyledSVGContainer ref={ref}>
+      {isLoaded ? (
         <StyledSVG
+          src={url}
+          alt={alt}
+          title={title}
           width={width}
           height={height}
-          hoverColor={hoverColor}
           isActive={isActive}
           isDisabled={isDisabled}
-          color={color}
-          activeColor={activeColor}
-          disabledColor={disabledColor}
-          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(svgContent) }}
-          ref={wrapperRef}
+          $hoverEffect={$hoverEffect}
+          $activeEffect={$activeEffect}
+          $disabledEffect={$disabledEffect}
           {...rest}
         />
       ) : (

@@ -2,9 +2,12 @@ import React from 'react';
 import { RemoteSVGProps } from '../RemoteSVG';
 
 const RemoteSVGMock: React.FC<RemoteSVGProps> = ({ title, 'aria-label': ariaLabel, role, ...props }) => {
-  const otherProps = Object.entries(props).map(([key, value]) => (
-    <span key={key}>{`${key}: ${JSON.stringify(value)}`}</span>
-  ));
+  const otherProps = Object.entries(props).map(([key, value]) => {
+    if (value === undefined) {
+      return null;
+    }
+    return <span key={key}>{`${key}: ${JSON.stringify(value)}`}</span>;
+  });
 
   return (
     <span
