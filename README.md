@@ -67,5 +67,3 @@ require('react-remote-svg/mock');
 ```
 
 2. Now, you can use the RemoteSVG component in your tests to verify the behavior of components that depend on RemoteSVG.
-
-I apologize for any confusion caused by the previous version of the readme. Thank you for bringing it to my attention, and I appreciate your understanding.
