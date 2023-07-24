@@ -27,7 +27,7 @@ const StyledSVGContainer = styled.span`
   align-items: center;
 `;
 
-const StyledSVG = styled('img', propsFilter)<{
+const StyledSVG = React.memo(styled('img', propsFilter)<{
   $activeEffect?: React.CSSProperties;
   $disabledEffect?: React.CSSProperties;
   $hoverEffect?: React.CSSProperties;
@@ -58,7 +58,7 @@ const StyledSVG = styled('img', propsFilter)<{
         ${{ ...$hoverEffect }}
       }
     `}
-`;
+`);
 
 const RemoteSVG: React.FC<RemoteSVGProps> = ({
   activeEffect,
