@@ -40,12 +40,12 @@ const StyledSVG = styled('img', propsFilter)<{
   height: ${({ height }) => (typeof height === 'number' ? `${height}px` : height)};
   cursor: ${({ $hoverEffect, $isDisabled: isDisabled }) => ($hoverEffect && !isDisabled ? 'pointer' : 'inherit')};
 
-  ${({ $isActive: isActive, $isDisabled: isDisabled, $activeEffect, $disabledEffect }) => {
-    if (isActive) {
+  ${({ $isActive, $isDisabled, $activeEffect, $disabledEffect }) => {
+    if ($isActive) {
       return { ...$activeEffect };
     }
 
-    if (isDisabled) {
+    if ($isDisabled) {
       return { ...$disabledEffect };
     }
   }};
