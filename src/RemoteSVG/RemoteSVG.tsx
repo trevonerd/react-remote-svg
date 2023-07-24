@@ -8,13 +8,13 @@ import propsFilter from './utils/propFilter';
 const supportsIntersectionObserver = typeof window !== 'undefined' && 'IntersectionObserver' in window;
 
 export interface RemoteSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
-  $activeEffect?: React.CSSProperties;
-  $disabledEffect?: React.CSSProperties;
-  $hoverEffect?: React.CSSProperties;
+  activeEffect?: React.CSSProperties;
+  disabledEffect?: React.CSSProperties;
+  hoverEffect?: React.CSSProperties;
   alt?: string;
   height?: number | string;
-  $isActive?: boolean;
-  $isDisabled?: boolean;
+  isActive?: boolean;
+  isDisabled?: boolean;
   lazyLoad?: boolean;
   title?: string;
   url: string;
@@ -61,12 +61,12 @@ const StyledSVG = styled('img', propsFilter)<{
 `;
 
 const RemoteSVG: React.FC<RemoteSVGProps> = ({
-  $activeEffect,
-  $disabledEffect,
+  activeEffect,
+  disabledEffect,
   height = 24,
-  $hoverEffect,
-  $isActive = false,
-  $isDisabled = false,
+  hoverEffect,
+  isActive = false,
+  isDisabled = false,
   lazyLoad = supportsIntersectionObserver,
   title,
   alt = title,
@@ -99,11 +99,11 @@ const RemoteSVG: React.FC<RemoteSVGProps> = ({
           title={title}
           width={width}
           height={height}
-          $isActive={$isActive}
-          $isDisabled={$isDisabled}
-          $hoverEffect={$hoverEffect}
-          $activeEffect={$activeEffect}
-          $disabledEffect={$disabledEffect}
+          $isActive={isActive}
+          $isDisabled={isDisabled}
+          $hoverEffect={hoverEffect}
+          $activeEffect={activeEffect}
+          $disabledEffect={disabledEffect}
           {...rest}
         />
       ) : (
