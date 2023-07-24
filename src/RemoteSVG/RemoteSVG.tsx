@@ -13,8 +13,8 @@ export interface RemoteSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
   $hoverEffect?: React.CSSProperties;
   alt?: string;
   height?: number | string;
-  isActive?: boolean;
-  isDisabled?: boolean;
+  $isActive?: boolean;
+  $isDisabled?: boolean;
   lazyLoad?: boolean;
   title?: string;
   url: string;
@@ -32,15 +32,15 @@ const StyledSVG = styled('img', propsFilter)<{
   $disabledEffect?: React.CSSProperties;
   $hoverEffect?: React.CSSProperties;
   height: number | string;
-  isActive?: boolean;
-  isDisabled?: boolean;
+  $isActive?: boolean;
+  $isDisabled?: boolean;
   width: number | string;
 }>`
   width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
   height: ${({ height }) => (typeof height === 'number' ? `${height}px` : height)};
-  cursor: ${({ $hoverEffect, isDisabled }) => ($hoverEffect && !isDisabled ? 'pointer' : 'inherit')};
+  cursor: ${({ $hoverEffect, $isDisabled: isDisabled }) => ($hoverEffect && !isDisabled ? 'pointer' : 'inherit')};
 
-  ${({ isActive, isDisabled, $activeEffect, $disabledEffect }) => {
+  ${({ $isActive: isActive, $isDisabled: isDisabled, $activeEffect, $disabledEffect }) => {
     if (isActive) {
       return { ...$activeEffect };
     }
@@ -50,7 +50,7 @@ const StyledSVG = styled('img', propsFilter)<{
     }
   }};
 
-  ${({ $hoverEffect, isDisabled }) =>
+  ${({ $hoverEffect, $isDisabled: isDisabled }) =>
     $hoverEffect &&
     !isDisabled &&
     css`
@@ -65,8 +65,8 @@ const RemoteSVG: React.FC<RemoteSVGProps> = ({
   $disabledEffect,
   height = 24,
   $hoverEffect,
-  isActive = false,
-  isDisabled = false,
+  $isActive = false,
+  $isDisabled = false,
   lazyLoad = supportsIntersectionObserver,
   title,
   alt = title,
@@ -99,8 +99,8 @@ const RemoteSVG: React.FC<RemoteSVGProps> = ({
           title={title}
           width={width}
           height={height}
-          isActive={isActive}
-          isDisabled={isDisabled}
+          $isActive={$isActive}
+          $isDisabled={$isDisabled}
           $hoverEffect={$hoverEffect}
           $activeEffect={$activeEffect}
           $disabledEffect={$disabledEffect}

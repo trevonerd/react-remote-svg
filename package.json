@@ -1,6 +1,6 @@
 {
   "name": "react-remote-svg",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "A React component that fetches an SVG from a URL and allows dynamic styling.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
