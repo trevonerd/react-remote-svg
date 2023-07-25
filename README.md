@@ -31,9 +31,9 @@ const MyComponent = () => (
       title="My Icon Title"
       width={24}
       height={24}
-      $hoverEffect={{ filter: 'brightness(1.2)' }}
-      $activeEffect={{ border: '2px solid red', borderRadius: '50%' }}
-      $disabledEffect={{ filter: 'grayscale(100%)' }}
+      hoverEffect={{ filter: 'brightness(1.2)' }}
+      activeEffect={{ border: '2px solid red', borderRadius: '50%' }}
+      disabledEffect={{ filter: 'grayscale(100%)' }}
     />
   </div>
 );
@@ -49,9 +49,9 @@ export default MyComponent;
 | title             | string             | The title attribute for the icon (for accessibility).|
 | width             | number \| string   | The width of the SVG icon.                          |
 | height            | number \| string   | The height of the SVG icon.                         |
-| $activeEffect     | React.CSSProperties | CSS properties for customizing the active state of the icon. |
-| $disabledEffect   | React.CSSProperties | CSS properties for customizing the disabled state of the icon. |
-| $hoverEffect      | React.CSSProperties | CSS properties for customizing the hover state of the icon. |
+| activeEffect     | React.CSSProperties | CSS properties for customizing the active state of the icon. |
+| disabledEffect   | React.CSSProperties | CSS properties for customizing the disabled state of the icon. |
+| hoverEffect      | React.CSSProperties | CSS properties for customizing the hover state of the icon. |
 | isActive          | boolean            | Whether the SVG icon is in an active state.          |
 | isDisabled        | boolean            | Whether the SVG icon is in a disabled state.        |
 | lazyLoad          | boolean            | Whether to lazy load the SVG icon when it appears in the viewport.        |
