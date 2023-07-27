@@ -3,8 +3,13 @@ RemoteSVG is a React component for efficiently loading SVG icons from remote sou
 
 ## Features
 - Lazy loading: Icons are fetched only when they become visible on the screen, improving performance.
-- Customizable colors and effects: Supports customization of the icon appearance in different states: default, hover, active, and disabled.
+
+- Customizable colors and effects: Supports customization of the icon appearance in different states - default, hover, active, and disabled.
+
+- Dark mode support: Ability to specify different icon variants for light and dark themes.
+
 - Flexible dimensions: Allows customization of the width and height of the icon.
+
 - Accessibility: Supports setting the alt text and title attributes for better accessibility.
 
 ## Installation
@@ -25,36 +30,38 @@ import RemoteSVG from 'react-remote-svg';
 
 const MyComponent = () => (
   <div>
-    <RemoteSVG 
-      url="http://example.com/my-icon.svg"
-      alt="My Icon"
-      title="My Icon Title"
+    <RemoteSVG  
+      url="icon.svg"
+      dark
+      isDisabled
+      useDisabledImage
+      alt="My Icon" 
       width={24}
       height={24}
-      hoverEffect={{ filter: 'brightness(1.2)' }}
-      activeEffect={{ border: '2px solid red', borderRadius: '50%' }}
-      disabledEffect={{ filter: 'grayscale(100%)' }}
+      disabledEffect={{ filter: 'grayscale(100%)' }} 
     />
-  </div>
+  </div> 
 );
 
 export default MyComponent;
 ```
 
 ## Props
-| Prop              | Type               | Description                                         |
-|-------------------|--------------------|-----------------------------------------------------|
-| url               | string             | The URL of the SVG icon.                            |
-| alt               | string             | The alternative text for the icon (for accessibility).|
-| title             | string             | The title attribute for the icon (for accessibility).|
-| width             | number \| string   | The width of the SVG icon.                          |
-| height            | number \| string   | The height of the SVG icon.                         |
-| activeEffect     | React.CSSProperties | CSS properties for customizing the active state of the icon. |
-| disabledEffect   | React.CSSProperties | CSS properties for customizing the disabled state of the icon. |
-| hoverEffect      | React.CSSProperties | CSS properties for customizing the hover state of the icon. |
-| isActive          | boolean            | Whether the SVG icon is in an active state.          |
-| isDisabled        | boolean            | Whether the SVG icon is in a disabled state.        |
-| lazyLoad          | boolean            | Whether to lazy load the SVG icon when it appears in the viewport.        |
+| Prop             | Type           | Description                            |
+| ---------------- | -------------- | -------------------------------------- |
+| url              | string         | The URL of the SVG icon.               |
+| alt              | string         | Alternative text for accessibility.    |
+| title            | string         | Title text for accessibility.          |
+| width            | number\|string | Width of the icon.                     |
+| height           | number\|string | Height of the icon.                    |
+| activeEffect     | CSSProperties  | Styles for active state.               |
+| disabledEffect   | CSSProperties  | Styles for disabled state.             |
+| hoverEffect      | CSSProperties  | Styles for hover state.                |
+| dark             | boolean        | Whether to use dark theme variant.     |
+| useDisabledImage | boolean        | Whether to use disabled image variant. |
+| useActiveImage   | boolean        | Whether to use active image variant.   |
+| useHoverImage    | boolean        | Whether to use hover image variant.    |
+| lazyLoad         | boolean        | Enable lazy loading when visible.      |
 
 ## Testing
 

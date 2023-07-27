@@ -110,4 +110,108 @@ describe('RemoteSVG Component', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('light mode - loads the correct image variant if isActive', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isActive
+        useImageActive
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('light mode - loads the correct image variant if isActive with activeEffect', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isActive
+        useImageActive
+        activeEffect={{ filter: 'brightness(0.8)' }}
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('light mode - loads the correct image variant if isDisabled', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isDisabled
+        useImageDisabled
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('light mode - loads the correct image variant if isDisabled with disabledEffect', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isDisabled
+        useImageDisabled
+        disabledEffect={{ filter: 'contrast(0.8)' }}
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('dark mode - loads the correct image variant if isActive', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isActive
+        useImageActive
+        dark
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('dark mode - loads the correct image variant if isActive with activeEffect', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isActive
+        useImageActive
+        activeEffect={{ filter: 'brightness(0.8)' }}
+        dark
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('dark mode - loads the correct image variant if isDisabled', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isDisabled
+        useImageDisabled
+        dark
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('dark mode - loads the correct image variant if isDisabled with disabledEffect', () => {
+    const { asFragment } = render(
+      <RemoteSVG
+        url="image.png"
+        isDisabled
+        useImageDisabled
+        disabledEffect={{ filter: 'contrast(0.8)' }}
+        dark
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
