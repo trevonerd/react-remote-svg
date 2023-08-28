@@ -1,21 +1,13 @@
-interface ImageVariants {
-  normal: string;
+type ImageVariants = {
+  hover: string;
   active: string;
   disabled: string;
-  hover: string;
-}
-
-export const imageVariants: { light: ImageVariants; dark: ImageVariants } = {
-  light: {
-    normal: '',
-    active: '_a',
-    disabled: '_d',
-    hover: '_h',
-  },
-  dark: {
-    normal: '_dm',
-    active: '_da',
-    disabled: '_dd',
-    hover: '_dh',
-  },
 };
+export const imageVariants: ImageVariants = {
+  hover: 'hover',
+  active: 'active',
+  disabled: 'disabled',
+};
+
+export const DARK_MODE = 'dark';
+export const LIGHT_MODE = 'light';

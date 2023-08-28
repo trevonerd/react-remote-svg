@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import * as path from 'path';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { useInView } from 'react-intersection-observer';
 
-import { imageVariants } from './utils/imageVariants';
+import { DARK_MODE, imageVariants, LIGHT_MODE } from './utils/imageVariants';
 import propsFilter from './utils/propFilter';
 
 const supportsIntersectionObserver = typeof window !== 'undefined' && 'IntersectionObserver' in window;
@@ -11,15 +12,17 @@ const supportsIntersectionObserver = typeof window !== 'undefined' && 'Intersect
 export interface RemoteSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
   activeEffect?: React.CSSProperties;
   alt?: string;
+  basePath: string;
+  customFolder?: string;
   dark?: boolean;
   disabledEffect?: React.CSSProperties;
   height?: number | string;
   hoverEffect?: React.CSSProperties;
+  iconName: string;
   isActive?: boolean;
   isDisabled?: boolean;
   lazyLoad?: boolean;
   title?: string;
-  url: string;
   useImageActive?: boolean;
   useImageDisabled?: boolean;
   useImageHover?: boolean;
@@ -69,25 +72,27 @@ const StyledSVGContainer = styled.span`
 
 const RemoteSVG: React.FC<RemoteSVGProps> = ({
   activeEffect,
+  basePath,
+  customFolder,
   dark,
   disabledEffect,
   height = 24,
   hoverEffect,
+  iconName,
   isActive = false,
   isDisabled = false,
   lazyLoad = supportsIntersectionObserver,
   title,
   alt = title,
-  url,
   useImageActive,
   useImageDisabled,
   useImageHover,
   width = 24,
   ...rest
 }) => {
-  const [imgSrc, setImgSrc] = useState(url);
+  const [imgSrc, setImgSrc] = useState(path.join(basePath, LIGHT_MODE, `${iconName}.svg`));
   const [isHovered, setIsHovered] = useState(false);
-  const [variants, setVariants] = useState(imageVariants.light);
+  const [variant, setVariant] = useState(LIGHT_MODE);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const { ref, inView } = useInView({
@@ -96,12 +101,14 @@ const RemoteSVG: React.FC<RemoteSVGProps> = ({
   });
 
   useEffect(() => {
-    if (dark) {
-      setVariants(imageVariants.dark);
+    if (customFolder) {
+      setVariant(customFolder);
+    } else if (dark) {
+      setVariant(DARK_MODE);
     } else {
-      setVariants(imageVariants.light);
+      setVariant(LIGHT_MODE);
     }
-  }, [dark]);
+  }, [customFolder, dark]);
 
   useEffect(() => {
     const loadImage = () => {
@@ -114,21 +121,21 @@ const RemoteSVG: React.FC<RemoteSVGProps> = ({
   }, [lazyLoad, inView]);
 
   useEffect(() => {
-    let newSrc = url;
+    let newSrc: string;
 
     if (isHovered && useImageHover && !isDisabled) {
-      newSrc = url.replace(/\.[^.]*$/, `${variants.hover}$&`);
-    } else if (useImageDisabled) {
-      newSrc = url.replace(/\.[^.]*$/, `${variants.disabled}$&`);
-    } else if (useImageActive) {
-      newSrc = url.replace(/\.[^.]*$/, `${variants.active}$&`);
+      newSrc = path.join(basePath, variant, imageVariants.hover, `${iconName}.svg`);
+    } else if (useImageDisabled && isDisabled) {
+      newSrc = path.join(basePath, variant, imageVariants.disabled, `${iconName}.svg`);
+    } else if (useImageActive && isActive) {
+      newSrc = path.join(basePath, variant, imageVariants.active, `${iconName}.svg`);
     } else {
       // default variant
-      newSrc = url.replace(/\.[^.]*$/, `${variants.normal}$&`);
+      newSrc = path.join(basePath, variant, `${iconName}.svg`);
     }
 
     setImgSrc(newSrc);
-  }, [isHovered, url, dark, useImageHover, isDisabled, useImageDisabled, useImageActive, variants]);
+  }, [isHovered, dark, useImageHover, isDisabled, useImageDisabled, useImageActive, variant]);
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);

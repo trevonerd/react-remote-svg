@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RemoteSVG Component dark mode - loads the correct image variant if isActive 1`] = `
+exports[`RemoteSVG Component customFolder - should load the correct image variant if isActive 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -29,162 +29,14 @@ exports[`RemoteSVG Component dark mode - loads the correct image variant if isAc
     <img
       class="emotion-1"
       height="24"
-      src="image_da.png"
+      src="https:/test-url.com/flags/active/test.svg"
       width="24"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component dark mode - loads the correct image variant if isActive with activeEffect 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  width: 24px;
-  height: 24px;
-  cursor: inherit;
-  -webkit-filter: brightness(0.8);
-  filter: brightness(0.8);
-}
-
-<span
-    class="emotion-0"
-  >
-    <img
-      class="emotion-1"
-      height="24"
-      src="image_da.png"
-      width="24"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component dark mode - loads the correct image variant if isDisabled 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  width: 24px;
-  height: 24px;
-  cursor: inherit;
-}
-
-<span
-    class="emotion-0"
-  >
-    <img
-      class="emotion-1"
-      height="24"
-      src="image_dd.png"
-      width="24"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component dark mode - loads the correct image variant if isDisabled with disabledEffect 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  width: 24px;
-  height: 24px;
-  cursor: inherit;
-  -webkit-filter: contrast(0.8);
-  filter: contrast(0.8);
-}
-
-<span
-    class="emotion-0"
-  >
-    <img
-      class="emotion-1"
-      height="24"
-      src="image_dd.png"
-      width="24"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component loads the correct image variant if isActive 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  width: 24px;
-  height: 24px;
-  cursor: inherit;
-}
-
-<span
-    class="emotion-0"
-  >
-    <img
-      class="emotion-1"
-      height="24"
-      src="image_a.png"
-      width="24"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component loads the correct image variant if isActive with activeEffect 1`] = `
+exports[`RemoteSVG Component customFolder - should load the correct image variant if isActive with activeEffect 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -215,14 +67,14 @@ exports[`RemoteSVG Component loads the correct image variant if isActive with ac
     <img
       class="emotion-1"
       height="24"
-      src="image_a.png"
+      src="https:/test-url.com/flags/active/test.svg"
       width="24"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isDisabled 1`] = `
+exports[`RemoteSVG Component customFolder - should load the correct image variant if isDisabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -251,14 +103,14 @@ exports[`RemoteSVG Component loads the correct image variant if isDisabled 1`] =
     <img
       class="emotion-1"
       height="24"
-      src="image_d.png"
+      src="https:/test-url.com/flags/disabled/test.svg"
       width="24"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isDisabled with disabledEffect 1`] = `
+exports[`RemoteSVG Component customFolder - should load the correct image variant if isDisabled with disabledEffect 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -289,14 +141,532 @@ exports[`RemoteSVG Component loads the correct image variant if isDisabled with 
     <img
       class="emotion-1"
       height="24"
-      src="image_d.png"
+      src="https:/test-url.com/flags/disabled/test.svg"
       width="24"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component renders SVG 1`] = `
+exports[`RemoteSVG Component customFolder - should load the correct image variant when hovered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/flags/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component customFolder - should load the correct image variant with hoverEffect when hovered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/flags/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant if isActive 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/active/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant if isActive with activeEffect 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/active/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant if isDisabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/disabled/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant if isDisabled with disabledEffect 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+  -webkit-filter: contrast(0.8);
+  filter: contrast(0.8);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/disabled/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant when hovered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component dark mode - should load the correct image variant with hoverEffect when hovered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/dark/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component light mode - should load the correct image variant if isActive 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/light/active/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component light mode - should load the correct image variant if isActive with activeEffect 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/light/active/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component light mode - should load the correct image variant if isDisabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/light/disabled/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component light mode - should load the correct image variant if isDisabled with disabledEffect 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: inherit;
+  -webkit-filter: contrast(0.8);
+  filter: contrast(0.8);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/light/disabled/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component light mode - should load the correct image variant with hoverEffect when hovered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+<span
+    class="emotion-0"
+  >
+    <img
+      class="emotion-1"
+      height="24"
+      src="https:/test-url.com/light/test.svg"
+      width="24"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component should not render SVG with active or disabled effect if isActive and isDisabled props are false 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<span
+    class="emotion-0"
+  >
+    <span
+      style="width: 24px; height: 24px; display: inline-block;"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`RemoteSVG Component should render SVG 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -326,14 +696,14 @@ exports[`RemoteSVG Component renders SVG 1`] = `
       alt="test image"
       class="emotion-1"
       height="24"
-      src="https://test-url.com/test.svg"
+      src="https:/test-url.com/light/test.svg"
       width="24"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component renders SVG with correct alt and title attributes 1`] = `
+exports[`RemoteSVG Component should renders SVG with correct alt and title attributes 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -363,7 +733,7 @@ exports[`RemoteSVG Component renders SVG with correct alt and title attributes 1
       alt="test image alt"
       class="emotion-1"
       height="24"
-      src="https://test-url.com/test.svg"
+      src="https:/test-url.com/light/test.svg"
       title="test image title"
       width="24"
     />
@@ -371,7 +741,7 @@ exports[`RemoteSVG Component renders SVG with correct alt and title attributes 1
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component renders SVG with hover correctly 1`] = `
+exports[`RemoteSVG Component should renders SVG with custom width and height as numbers 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -389,78 +759,9 @@ exports[`RemoteSVG Component renders SVG with hover correctly 1`] = `
 }
 
 .emotion-1 {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.emotion-1:hover {
-  -webkit-filter: brightness(0.8);
-  filter: brightness(0.8);
-}
-
-<span
-    class="emotion-0"
-  >
-    <img
-      class="emotion-1"
-      height="24"
-      src="https://test-url.com/test.svg"
-      width="24"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component renders active SVG correctly 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-<span
-    class="emotion-0"
-  >
-    <span
-      style="width: 24px; height: 24px; display: inline-block;"
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`RemoteSVG Component renders disabled SVG correctly 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 100px;
   cursor: inherit;
-  opacity: 0.5;
 }
 
 <span
@@ -468,15 +769,15 @@ exports[`RemoteSVG Component renders disabled SVG correctly 1`] = `
   >
     <img
       class="emotion-1"
-      height="24"
-      src="https://test-url.com/test.svg"
-      width="24"
+      height="100"
+      src="https:/test-url.com/light/test.svg"
+      width="100"
     />
   </span>
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component should not renders SVG with active, disabled effect if isActive or isDisabled props are false 1`] = `
+exports[`RemoteSVG Component should renders SVG with custom width and height as strings 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -493,11 +794,20 @@ exports[`RemoteSVG Component should not renders SVG with active, disabled effect
   justify-content: center;
 }
 
+.emotion-1 {
+  width: 100px;
+  height: 100px;
+  cursor: inherit;
+}
+
 <span
     class="emotion-0"
   >
-    <span
-      style="width: 24px; height: 24px; display: inline-block;"
+    <img
+      class="emotion-1"
+      height="100px"
+      src="https:/test-url.com/light/test.svg"
+      width="100px"
     />
   </span>
 </DocumentFragment>
