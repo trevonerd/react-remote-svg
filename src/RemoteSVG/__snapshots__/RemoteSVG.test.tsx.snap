@@ -148,7 +148,7 @@ exports[`RemoteSVG Component dark mode - loads the correct image variant if isDi
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isActive 1`] = `
+exports[`RemoteSVG Component light mode - loads the correct image variant if isActive 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -184,7 +184,7 @@ exports[`RemoteSVG Component loads the correct image variant if isActive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isActive with activeEffect 1`] = `
+exports[`RemoteSVG Component light mode - loads the correct image variant if isActive with activeEffect 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -222,7 +222,7 @@ exports[`RemoteSVG Component loads the correct image variant if isActive with ac
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isDisabled 1`] = `
+exports[`RemoteSVG Component light mode - loads the correct image variant if isDisabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;
@@ -258,7 +258,7 @@ exports[`RemoteSVG Component loads the correct image variant if isDisabled 1`] =
 </DocumentFragment>
 `;
 
-exports[`RemoteSVG Component loads the correct image variant if isDisabled with disabledEffect 1`] = `
+exports[`RemoteSVG Component light mode - loads the correct image variant if isDisabled with disabledEffect 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-align-items: center;

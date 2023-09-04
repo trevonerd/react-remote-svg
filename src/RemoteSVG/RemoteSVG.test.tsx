@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-imports
+
 import RemoteSVG from './RemoteSVG';
 
 const mockUrl = 'https://test-url.com/test.svg';
